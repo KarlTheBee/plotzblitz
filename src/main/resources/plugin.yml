@@ -1,0 +1,58 @@
+name: Plotsblitz
+main: de.karlthebee.spigot.plotsblitz.Plotsblitz
+version : 0.0.1
+description : An application for creating plots
+author : KarlTheBee
+website : karlthebee.de
+depend : [Vault]
+softdepend : [WorldEdit]
+
+commands:
+  plot:
+    description: Suggests commands
+    usage: /plot
+  plot-buy:
+    description : buys an plot
+    usage: /plot-buy
+  plot-delete:
+    description: deletes an plot
+    usage: /plot-delete
+  plot-friend-add:
+    description: adds a friend to a plot
+  plot-friend-delete:
+    description: removes a friend from a plot
+  plot-info:
+    description: displays information about a plot
+  plot-home:
+    description : shows all homes and let you teleport to them
+  plot-world-generate:
+    description: generates a new world
+    usage: /plot-world-generate <world> <plotsize> <crossing>
+    permission: plotzblitz.world
+  plot-world:
+    description: lists all worlds
+    usage : /plot-world
+    permission: plotzblitz.world
+  plot-world-create:
+    description: creates a new world
+    usage: /plot-world-create <world> <plotsize> <cost> <crossing>
+    permission: plotzblitz.world
+  plot-world-delete:
+    description: removes a world
+    usage: /plot-world-delete <world>
+    permission: plotzblitz.world
+  plot-admin:
+    description: switches admin mode
+    permission: plot.adminmode
+  plot-help:
+    description: shows a help page
+
+permissions:
+  plotzblitz.info:
+    description : Lists all worlds
+  plotzblitz.world:
+    description : Can generate, create and delete worlds
+  plotzblitz.adminmode:
+    description : Allows switching to admin mode
+  plotsblitz.system:
+    description : Allows editing system plots
