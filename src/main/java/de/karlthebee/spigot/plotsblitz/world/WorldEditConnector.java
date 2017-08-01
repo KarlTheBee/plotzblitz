@@ -65,7 +65,7 @@ public class WorldEditConnector extends AbstractDelegateExtent {
 	@Override
 	public boolean setBlock(Vector location, BaseBlock block) throws WorldEditException {
 		Player p = getPlayer();
-		Location l = BukkitUtil.toLocation(null, location);
+		Location l = BukkitUtil.toLocation(p.getWorld(), location);
 
 		Plot plot = null;
 		try {

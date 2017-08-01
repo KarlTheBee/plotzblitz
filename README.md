@@ -8,6 +8,7 @@ A plugin for automatically creating and managing plots
 - player can add friend to build together
 - player can use worldedit in their plots - and only in their plots
 - system plots allows using plots for public places
+- automatically checks for updates
 
 
 ## Installation
@@ -22,7 +23,8 @@ If an error is thrown, please enter the right database credentials
 ## Usage
 
 ### Generate an world
-You can use the world
+You can use the worldgenerator buildin with plotzblitz through the command /plot-world-generate <world> <plotsize> <crossing> to generate a new world. After that, just use the create command below.
+Note that you might want to reload the server as other plugins currently don't always recognize new worlds
 
 
 ### Create an world

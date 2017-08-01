@@ -25,6 +25,7 @@ import de.karlthebee.spigot.plotsblitz.command.WorldGenerateCommand;
 import de.karlthebee.spigot.plotsblitz.database.Database;
 import de.karlthebee.spigot.plotsblitz.database.WorldData;
 import de.karlthebee.spigot.plotsblitz.util.AdminMode;
+import de.karlthebee.spigot.plotsblitz.util.AutoUpdate;
 import de.karlthebee.spigot.plotsblitz.util.PBUitl;
 import de.karlthebee.spigot.plotsblitz.world.PlotEvents;
 import de.karlthebee.spigot.plotsblitz.world.PlotWorldGenerator;
@@ -69,6 +70,8 @@ public class Plotsblitz extends JavaPlugin {
 	public void onEnable() {
 		pb = this;
 		logger().info("Welcome to Plotsblitz. Initialising....");
+
+		AutoUpdate.getInstance().checkForUpdates();
 
 		try {
 			initDatabase();

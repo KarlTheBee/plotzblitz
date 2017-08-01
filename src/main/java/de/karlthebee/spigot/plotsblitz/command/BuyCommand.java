@@ -70,7 +70,7 @@ public class BuyCommand implements CommandExecutor {
 			Plotsblitz.getEconomy().depositPlayer(p, cost);
 			return true;
 		}
-		p.sendMessage("Your plot is created");
+		p.sendMessage(Color.INFO + "Your plot is created");
 
 		return true;
 	}

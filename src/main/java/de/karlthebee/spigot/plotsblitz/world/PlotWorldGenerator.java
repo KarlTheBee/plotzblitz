@@ -141,11 +141,9 @@ public class PlotWorldGenerator extends ChunkGenerator {
 	private void buildNorthLine(ChunkData data, boolean crossing) {
 		data.setRegion(0, HEIGHT - 1, 8 - CROSSING_HALF, 16, HEIGHT, 8 + CROSSING_HALF, Material.QUARTZ_BLOCK);
 
-		data.setRegion(0, HEIGHT, 1, 16, HEIGHT + 1, 2, Material.WOOD.getNewData((byte) 1));
-		data.setRegion(0, HEIGHT + 1, 1, 16, HEIGHT + 2, 2, Material.LEAVES.getNewData((byte) 1));
+		data.setRegion(0, HEIGHT, 1, 16, HEIGHT + 1, 2, Material.LEAVES.getNewData((byte) 1));
 
-		data.setRegion(0, HEIGHT, 14, 16, HEIGHT + 1, 15, Material.WOOD.getNewData((byte) 1));
-		data.setRegion(0, HEIGHT + 1, 14, 16, HEIGHT + 2, 15, Material.LEAVES.getNewData((byte) 1));
+		data.setRegion(0, HEIGHT, 14, 16, HEIGHT + 1, 15, Material.LEAVES.getNewData((byte) 1));
 
 		data.setRegion(0, HEIGHT, 8 - CROSSING_HALF, 16, HEIGHT + 2, 8 + CROSSING_HALF, Material.AIR);
 
@@ -159,11 +157,9 @@ public class PlotWorldGenerator extends ChunkGenerator {
 	private void buildEastLine(ChunkData data, boolean crossing) {
 		data.setRegion(8 - CROSSING_HALF, HEIGHT - 1, 0, 8 + CROSSING_HALF, HEIGHT, 16, Material.QUARTZ_BLOCK);
 
-		data.setRegion(1, HEIGHT, 0, 2, HEIGHT + 1, 16, Material.WOOD.getNewData((byte) 1));
-		data.setRegion(1, HEIGHT + 1, 0, 2, HEIGHT + 2, 16, Material.LEAVES.getNewData((byte) 1));
+		data.setRegion(1, HEIGHT, 0, 2, HEIGHT + 1, 16, Material.LEAVES.getNewData((byte) 1));
 
-		data.setRegion(14, HEIGHT, 0, 15, HEIGHT + 1, 16, Material.WOOD.getNewData((byte) 1));
-		data.setRegion(14, HEIGHT + 1, 0, 15, HEIGHT + 2, 16, Material.LEAVES.getNewData((byte) 1));
+		data.setRegion(14, HEIGHT, 0, 15, HEIGHT + 1, 16, Material.LEAVES.getNewData((byte) 1));
 
 		data.setRegion(8 - CROSSING_HALF, HEIGHT, 0, 8 + CROSSING_HALF, HEIGHT + 2, 16, Material.AIR);
 

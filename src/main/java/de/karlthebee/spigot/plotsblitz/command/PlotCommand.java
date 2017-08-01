@@ -32,7 +32,12 @@ public class PlotCommand implements CommandExecutor {
 			plot = BukkitDatabaseConnector.getPlot(p);
 
 		} catch (NoPlotWorldException e) {
+			if (p.hasPermission("plotzblitz.world")) {
+				new SimpleTextBuilder().append(Color.ITEM).append("Create plotzblitz world", Color.INTERACTIVE,
+						new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/plot-world-create")).send(p);
+			}else {
 			p.sendMessage(Color.ERROR + "This is not an plotzblitz world");
+			}
 			return true;
 		} catch (NoPlotException e) {
 			new SimpleTextBuilder().append(Color.ITEM).append("Buy this plot", Color.INTERACTIVE,
@@ -43,7 +48,7 @@ public class PlotCommand implements CommandExecutor {
 
 		new SimpleTextBuilder().append(Color.ITEM).append("Get information about this plot", Color.INTERACTIVE,
 				new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/plot-info")).send(p);
-		;
+		
 
 		if (plot.isOwner(p)) {
 			new SimpleTextBuilder().append(Color.ITEM).append("Build together with an friend", Color.INTERACTIVE,
@@ -60,6 +65,11 @@ public class PlotCommand implements CommandExecutor {
 		new SimpleTextBuilder().append(Color.ITEM).append("List your plots", Color.INTERACTIVE,
 				new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/plot-home"));
 
+		if (p.hasPermission("plotzblitz.adminmode")) {
+			new SimpleTextBuilder().append(Color.ITEM).append("Switch admin mode", Color.INTERACTIVE,
+					new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/plot-admin"));
+		}
+		
 		return true;
 	}
 

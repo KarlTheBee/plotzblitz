@@ -1,6 +1,7 @@
 package de.karlthebee.spigot.plotsblitz.command;
 
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -31,7 +32,9 @@ public class FriendAddCommand implements CommandExecutor {
 		String name = args[0];
 		Player p = (Player) sender;
 
-		Player friend = Bukkit.getPlayer(name);
+		//Player friend = Bukkit.getPlayer(name);
+		@SuppressWarnings("deprecation")
+		OfflinePlayer friend = Bukkit.getOfflinePlayer(name);
 		if (friend == null) {
 			p.sendMessage(Color.ERROR + "The player \"" + Color.INFO + name + Color.ERROR
 					+ "\" was not found. Is he online?");
